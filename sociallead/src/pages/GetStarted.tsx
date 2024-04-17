@@ -1,40 +1,40 @@
 import React, { useState } from "react";
 import UserPool from "../UserPool";
-import { SignUp } from "@clerk/clerk-react"
+// import { SignUp } from "@clerk/clerk-react"
 
 
 // Cognito
 
-// const Signup = () => {
+const SignUp = () => {
     
-//     const [email, setEmail] = useState("");
-//     const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-//     const onSubmit = (event: React.FormEvent) => {
-//         event.preventDefault();
+    const onSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
 
-//         UserPool.signUp(email, password, [], [], (err, data) => {
-//             if (err) {
-//                 console.error(err);
-//             }
-//             console.log(data);
-//         });
-//     };
+        UserPool.signUp(email, password, [], [], (err, data) => {
+            if (err) {
+                console.error(err);
+            }
+            console.log(data);
+        });
+    };
 
-//     return (
-//         <form onSubmit={onSubmit} id="email-form" name="email-form" data-name="Email Form" method="get" className="signup-form">
-//             <div className="form-field-block _100">
-//                 <label htmlFor="email-3" className="text-label dark">Email*</label>
-//                 <input value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-input alter w-input" maxLength={256} name="email" data-name="email" placeholder="Enter your email" id="email-3" required/>
-//             </div>
-//             <div className="form-field-block _100">
-//                 <label htmlFor="Password" className="text-label dark">Password*</label>
-//                 <input value={password} onChange={(event) => setPassword(event.target.value)} type="password" className="form-input alter w-input" maxLength={256} name="Password" data-name="Password" placeholder="Enter your password" id="Password" required/>
-//             </div>
-//             <input type="submit" value="Continue" data-wait="Please wait..." className="main-button w-button"/>
-//         </form>
-//     )
-// }
+    return (
+        <form onSubmit={onSubmit} id="email-form" name="email-form" data-name="Email Form" method="get" className="signup-form">
+            <div className="form-field-block _100">
+                <label htmlFor="email-3" className="text-label dark">Email*</label>
+                <input value={email} onChange={(event) => setEmail(event.target.value)} type="email" className="form-input alter w-input" maxLength={256} name="email" data-name="email" placeholder="Enter your email" id="email-3" required/>
+            </div>
+            <div className="form-field-block _100">
+                <label htmlFor="Password" className="text-label dark">Password*</label>
+                <input value={password} onChange={(event) => setPassword(event.target.value)} type="password" className="form-input alter w-input" maxLength={256} name="Password" data-name="Password" placeholder="Enter your password" id="Password" required/>
+            </div>
+            <input type="submit" value="Continue" data-wait="Please wait..." className="main-button w-button"/>
+        </form>
+    )
+}
 
 
 

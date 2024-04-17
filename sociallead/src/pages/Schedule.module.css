@@ -29,9 +29,7 @@ body.dark {
 }
 
 body {
-  position: relative;
   min-height: 100vh;
-  display: flex;
   align-items: center;
   justify-content: center;
   padding-bottom: 30px;
@@ -40,13 +38,6 @@ body {
   transition: var(--tran-05);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
-}
 
 /*==== nice scroll bar ====*/
 ::-webkit-scrollbar {

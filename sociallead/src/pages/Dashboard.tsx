@@ -133,7 +133,7 @@ export default function Dashboard() {
 
                         <div className={`${DASH.reminders}`}>
                             <div className={`${DASH.header}`}>
-                                <i className='bx bx-note'></i>
+                                <i className={`bx bx-note ${DASH.bx}`}></i>
                                 <h3>Reminders</h3>
                                 <i className='bx bx-filter'></i>
                                 <i className='bx bx-plus'></i>
@@ -142,24 +142,24 @@ export default function Dashboard() {
                         <li className={DASH.completed}>
                             <div className={DASH.tasktitle}>
                                 <i className='bx bx-check-circle'></i>
-                                <p>Start Our Meeting</p>
+                                <p>Post a story</p>
                             </div>
                             <i className='bx bx-dots-vertical-rounded'></i>
                         </li>
-                        <li className={DASH.completed}>
+                        {/* <li className={DASH.completed}>
                             <div className={DASH.tasktitle}>
                                 <i className='bx bx-check-circle'></i>
                                 <p>Analyse Our Site</p>
                             </div>
                             <i className='bx bx-dots-vertical-rounded'></i>
-                        </li>
-                        <li className={DASH.notcompleted}>
+                        </li> */}
+                        {/* <li className={DASH.notcompleted}>
                             <div className={DASH.tasktitle}>
                                 <i className='bx bx-x-circle'></i>
                                 <p>Play Footbal</p>
                             </div>
                             <i className='bx bx-dots-vertical-rounded'></i>
-                        </li>
+                        </li> */}
                     </ul>
                         </div>
                     </div>

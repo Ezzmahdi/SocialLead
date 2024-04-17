@@ -11,7 +11,8 @@ import GetStarted from './pages/GetStarted';
 import Login from './pages/Login';
 import ForgetPass from './pages/ForgetPass';
 import Dashboard from './pages/Dashboard'
-import Schedule from './pages/Schedule'
+import Content from './pages/Content';
+import Schedule from './pages/Schedule';
 
 
 
@@ -35,6 +36,7 @@ function App() {
 
 
         <Route path='/dashboard' element={<Dashboard />}/>
+        <Route path='/content' element={<Content />}/>
         <Route path='/schedule' element={<Schedule />}/>
 
 

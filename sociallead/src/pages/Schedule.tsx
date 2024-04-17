@@ -1,9 +1,12 @@
 import Sidebar from '../components/sidebar';
 import SCH from './Schedule.module.css'
+import { useEffect } from 'react';
+// import initializeCalendar from './Schedule.js'
 
 
 
 export default function Schedule() {
+
     return (
         <div>
             <Sidebar/>
@@ -26,13 +29,15 @@ export default function Schedule() {
                                 <div>Fri</div>
                                 <div>Sat</div>
                             </div>
-                            <div className={SCH.days}></div>
+                            <div className={SCH.days}>
+
+                            </div>
                             <div className={SCH.gototoday}>
                                 <div className={SCH.goto}>
                                     <input type="text" placeholder="mm/yyyy" className="date-input" />
-                                    <button className="goto-btn">Go</button>
+                                    <button className="gotobtn">Go</button>
                                 </div>
-                                <button className="today-btn">Today</button>
+                                <button className="todaybtn">Today</button>
                             </div>
                         </div>
                     </div>
@@ -55,14 +60,14 @@ export default function Schedule() {
                                     <input
                                       type="text"
                                       placeholder="Event Time From"
-                                      className="event-time-from"
+                                      className="eventtimefrom"
                                     />
                                 </div>
-                                <div className="addeventinput">
+                                <div className={SCH.addeventinput}>
                                     <input
                                       type="text"
                                       placeholder="Event Time To"
-                                      className="event-time-to"
+                                      className="eventtimeto"
                                     />
                                 </div>
                             </div>
@@ -76,6 +81,7 @@ export default function Schedule() {
                     </button>
                 </div>
             </section>
+
         </div>
     )
 }

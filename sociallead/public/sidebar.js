@@ -1,9 +1,9 @@
 const body = document.querySelector('body');
     sidebar = body.querySelector('body');
     toggle = body.querySelector(".toggle"),
-    searchBtn = body.querySelector(".search-box"),
-    modeSwtich = body.querySelector(".toggle-switch"),
-    modeText = body.querySelector(".mode-text");
+    searchBtn = body.querySelector(".searchbox"),
+    modeSwtich = body.querySelector(".toggleswitch"),
+    modeText = body.querySelector(".modetext");
     
     toggle.addEventListener("click", () =>{
       var sidebar = document.querySelector('.sidebar');

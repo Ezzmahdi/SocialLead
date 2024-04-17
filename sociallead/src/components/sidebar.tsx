@@ -1,52 +1,12 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import BAR from './sidebar.module.css'
 
 
 
 
 export default function Sidebar() {
-    useEffect(() => {
-        const body = document.querySelector('body');
-        const sidebar = document.querySelector(`${BAR.sidebar}`);
-        const toggle = document.querySelector(`${BAR.toggle}`);
-        const searchBtn = document.querySelector(`${BAR.searchbox}`);
-        const modeText = document.querySelector(`${BAR.modetext}`);
-        const modeSwitch = document.querySelector(`${BAR.toggleswitch}`);
-
-        if (toggle) {
-            toggle.addEventListener('click', () => {
-                if (sidebar) {
-                    sidebar.classList.toggle('close');
-                } else {
-                    console.error('Sidebar element not found.');
-                }
-            });
-        }
-
-        if (searchBtn) {
-            searchBtn.addEventListener('click', () => {
-                if (sidebar) {
-                    sidebar.classList.remove('close');
-                } else {
-                    console.error('Sidebar element not found.');
-                }
-            });
-        }
-
-        if (modeSwitch) {
-            modeSwitch.addEventListener('click', () => {
-                body?.classList.toggle('dark');
-
-                if (modeText) {
-                    (modeText as HTMLElement).innerText = body?.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-                }
-            });
-        }
-    }, []);
 
   return (
-    
         <nav className={`${BAR.sidebar}`}>
             <header>
                 <div className={BAR.imagetext}>
@@ -101,12 +61,12 @@ export default function Sidebar() {
                             </a>
                         </li>
 
-                        <li className={`${BAR['nav-link']} `}>
+                        {/* <li className={`${BAR['nav-link']} `}>
                             <a href="" >
                                 <i className={`bx bx-bell ${BAR.icon}`}></i>
                                 <span className={`${BAR.text} ${BAR['nav-text']}`}>Notification</span>
                             </a>
-                        </li>
+                        </li> */}
 
                     </ul>
                 </div>
@@ -119,7 +79,7 @@ export default function Sidebar() {
                         </a>
                     </li>
 
-                    <li className={`${BAR.mode} `}>
+                    {/* <li className={`${BAR.mode} `}>
                         <div className={`${BAR['moon-sun']}`}>
                             <i className={`bx bx-moon ${BAR.icon} ${BAR.moon}`}></i>
                             <i className={`bx bx-sun ${BAR.icon} ${BAR.sun}`}></i>
@@ -131,10 +91,11 @@ export default function Sidebar() {
                             <span className={BAR.switch}></span>
                         </div>
 
-                    </li>
+                    </li> */}
                 </div>
             </div>
         </nav>
+
 
   )
 }
